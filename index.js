@@ -67,7 +67,11 @@ run().catch(console.dir);
 
 app.get('/', (req, res) => {
     res.send('Server connected');
-})
+});
+
+app.get('/hello', (req, res) => {
+    res.send('hello updated heroku');
+});
 
 app.listen(port, () => {
     console.log('Server is Rinning port is :', port);
